@@ -1,8 +1,7 @@
 cap = ['a', 'c', 'e', 'g', 'h', 'j', 'l', 'o', 'q', 'r', 's', 'u', 'w', 'y']
 
 print("::WELCOME TO IDIOTIC TEXT GENERATOR::")
-
-line = input("Enter non-idiotic text: ")
+print("::KEEP ON TYPING OR ENTER . TO EXIT")
 
 def idiotize(str):
     str = str.lower()
@@ -16,5 +15,9 @@ def idiotize(str):
     
     return idioticStr
 
-print(idiotize(line))
-exit = input("PRESS ENTER TO EXIT")
+while True:
+    line = input("Enter non-idiotic text: ")
+    print(idiotize(line))
+    if line == '.':
+        print("Quitting program...")
+        break
